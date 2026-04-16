@@ -1,0 +1,264 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Hero Section -->
+<section id="home" class="hero-section">
+    <div class="container">
+        <div class="row align-items-center min-vh-100">
+            <div class="col-lg-7" data-aos="fade-right">
+                <span class="badge bg-primary mb-3">Available for Work</span>
+                <h1 class="display-3 fw-bold mb-3">
+                    Hi, I'm <span class="text-gradient">Mohsin Ali</span>
+                </h1>
+                <h2 class="h3 text-muted mb-4">Junior .NET Developer</h2>
+                <p class="lead mb-4">
+                    1+ years of experience building web and mobile applications using ASP.NET Core, 
+                    Flutter and React. Proficient in REST API development, database design and cloud deployment.
+                </p>
+                <div class="d-flex gap-3">
+                    <a href="#projects" class="btn btn-primary btn-lg">View Projects</a>
+                    <a href="@Url.Action("Contact", "Home")" class="btn btn-outline-primary btn-lg">Contact Me</a>
+                </div>
+            </div>
+            <div class="col-lg-5 text-center" data-aos="fade-left">
+                <div class="profile-wrapper">
+                    <img src="~/images/myimage.jpeg"
+                         alt="Mohsin Ali Software Developer"
+                         class="img-fluid rounded-circle shadow-lg"
+                         style="width: 280px; height: 280px; object-fit: cover;" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about-section py-5">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="section-title">About Me</h2>
+            <div class="title-divider"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 mx-auto" data-aos="fade-up">
+                <div class="about-card">
+                    <p class="lead">
+                        I'm a passionate Junior .NET Developer from Karachi, Pakistan, dedicated to building 
+                        scalable and maintainable web applications. Currently working at Bahria Town Karachi, 
+                        I specialize in modernizing legacy systems to .NET Core architecture.
+                    </p>
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <ul class="info-list">
+                                <li><i class="fas fa-map-marker-alt text-primary"></i> Karachi, Pakistan</li>
+                                <li><i class="fas fa-envelope text-primary"></i> mohsinadspec@gmail.com</li>
+                                <li><i class="fas fa-phone text-primary"></i> +92-324-9809554</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="info-list">
+                                <li><i class="fab fa-github text-primary"></i> github.com/MohsinAli-Developer</li>
+                                <li><i class="fab fa-linkedin text-primary"></i> linkedin.com/in/mohsin-ali</li>
+                                <li><i class="fas fa-graduation-cap text-primary"></i> BE Computer Engineering (3.5 GPA)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills-section py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="title-divider"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" data-aos="fade-right">
+                <h3 class="h4 mb-3">Frontend</h3>
+                <div class="skills-wrapper">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Flutter</span>
+                    <span class="skill-tag">Bootstrap</span>
+                    <span class="skill-tag">Dart</span>
+                </div>
+                
+                <h3 class="h4 mb-3 mt-4">Backend</h3>
+                <div class="skills-wrapper">
+                    <span class="skill-tag">C#</span>
+                    <span class="skill-tag">ASP.NET Core MVC</span>
+                    <span class="skill-tag">ASP.NET Web API</span>
+                    <span class="skill-tag">Entity Framework Core</span>
+                    <span class="skill-tag">Dapper</span>
+                    <span class="skill-tag">SQL</span>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-left">
+                <h3 class="h4 mb-3">Databases</h3>
+                <div class="skills-wrapper">
+                    <span class="skill-tag">SQL Server</span>
+                    <span class="skill-tag">SAP HANA</span>
+                    <span class="skill-tag">Oracle</span>
+                    <span class="skill-tag">Firebase Firestore</span>
+                </div>
+                
+                <h3 class="h4 mb-3 mt-4">Tools & Cloud</h3>
+                <div class="skills-wrapper">
+                    <span class="skill-tag">Microsoft Azure</span>
+                    <span class="skill-tag">IIS</span>
+                    <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">Visual Studio</span>
+                    <span class="skill-tag">Postman</span>
+                    <span class="skill-tag">SSMS</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="experience-section py-5">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="title-divider"></div>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-badge"><i class="fas fa-briefcase"></i></div>
+                <div class="timeline-content">
+                    <h3>Junior Software Developer</h3>
+                    <h4>Bahria Town Karachi</h4>
+                    <p class="date"><i class="far fa-calendar-alt"></i> Feb 2026 - Present</p>
+                    <ul>
+                        <li>Developing mobile applications using Flutter integrated with ASP.NET Core Web APIs</li>
+                        <li>Building and maintaining backend APIs using ASP.NET Core with Oracle Database</li>
+                        <li>Deploying and managing APIs on internal servers using IIS</li>
+                        <li>Assisting in upgrading legacy applications to modern .NET Core MVC architecture</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item" data-aos="fade-left">
+                <div class="timeline-badge"><i class="fas fa-code"></i></div>
+                <div class="timeline-content">
+                    <h3>Junior Developer</h3>
+                    <h4>Elysian Systems</h4>
+                    <p class="date"><i class="far fa-calendar-alt"></i> Nov 2025 - Jan 2026</p>
+                    <ul>
+                        <li>Promoted from intern based on performance and technical contribution</li>
+                        <li>Developed backend features using ASP.NET Core, C#, and Entity Framework</li>
+                        <li>Optimized SQL queries and improved application reliability</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-badge"><i class="fas fa-graduation-cap"></i></div>
+                <div class="timeline-content">
+                    <h3>Software Development Intern</h3>
+                    <h4>Elysian Systems</h4>
+                    <p class="date"><i class="far fa-calendar-alt"></i> Aug 2025 - Oct 2025</p>
+                    <ul>
+                        <li>Assisted in developing Web APIs and MVC applications, gaining hands-on experience in full-stack .NET development</li>
+                        <li>Debugged production issues and wrote database migration scripts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects-section py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="title-divider"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-store fa-3x"></i>
+                    </div>
+                    <h3>Electronics Shop ERP System</h3>
+                    <p>Complete ERP solution using ASP.NET Core, Entity Framework, and React with inventory management, billing, and reporting modules.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">ASP.NET Core</span>
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">Entity Framework</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-trash-alt fa-3x"></i>
+                    </div>
+                    <h3>Garbage Complaint System</h3>
+                    <p>Flutter mobile app integrated with ASP.NET Core Web API. Real-time complaint tracking with Firebase and Azure deployment.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Flutter</span>
+                        <span class="tech-badge">ASP.NET Web API</span>
+                        <span class="tech-badge">Firebase</span>
+                        <span class="tech-badge">Azure</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-water fa-3x"></i>
+                    </div>
+                    <h3>IoT Water Quality Monitoring</h3>
+                    <p>IoT-based monitoring system using ESP32 and sensors. ASP.NET Web API backend with Flutter mobile app for real-time data visualization.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">IoT</span>
+                        <span class="tech-badge">ESP32</span>
+                        <span class="tech-badge">ASP.NET Core</span>
+                        <span class="tech-badge">SQL Server</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Education & Achievements -->
+<section class="education-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" data-aos="fade-right">
+                <h2 class="section-title">Education</h2>
+                <div class="education-card">
+                    <h3>Bachelor of Science in Computer Engineering</h3>
+                    <p class="institution">BUITEMS, Quetta</p>
+                    <p class="date">2021 - 2025</p>
+                    <p class="gpa"><strong>GPA: 3.5 / 4.0</strong></p>
+                </div>
+            </div>
+            
+            <div class="col-md-6" data-aos="fade-left">
+                <h2 class="section-title">Achievements</h2>
+                <div class="achievements-card">
+                    <ul>
+                        <li>Developed Flutter mobile app with ASP.NET Core backend and Oracle Database integration</li>
+                        <li>Assisted in updating and improving existing applications using ASP.NET Core</li>
+                        <li>Deployed applications on Microsoft Azure and IIS with guidance from senior developers</li>
+                        <li>Worked with Firebase to implement real-time features and notifications</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

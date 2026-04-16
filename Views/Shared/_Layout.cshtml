@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Mohsin Ali" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Primary Meta Tags -->
+    <title>@ViewData["Title"] - Mohsin Ali | .NET Developer Portfolio</title>
+    <meta name="title" content="@ViewData["Title"] - Mohsin Ali | .NET Developer" />
+    <meta name="description" content="@ViewData["Description"]" />
+    <meta name="keywords" content="ASP.NET Core Developer, C#, Flutter, React, .NET Developer Portfolio, Karachi, Pakistan" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="@ViewData["CanonicalUrl"]" />
+    <meta property="og:title" content="@ViewData["Title"] - Mohsin Ali | .NET Developer" />
+    <meta property="og:description" content="@ViewData["Description"]" />
+    <meta property="og:image" content="@ViewData["OgImage"]" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="@ViewData["CanonicalUrl"]" />
+    <meta property="twitter:title" content="@ViewData["Title"] - Mohsin Ali | .NET Developer" />
+    <meta property="twitter:description" content="@ViewData["Description"]" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="@ViewData["CanonicalUrl"]" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+            "@@context": "https://schema.org",
+            "@@type": "Person",
+            "name": "Mohsin Ali",
+            "url": "https://yourdomain.com",
+            "jobTitle": "Junior .NET Developer",
+            "email": "mohsinadspec@gmail.com",
+            "telephone": "+92-324-9809554",
+            "address": {
+                "@@type": "PostalAddress",
+                "addressLocality": "Karachi",
+                "addressCountry": "Pakistan"
+            },
+            "sameAs": [
+                "https://github.com/MohsinAli-Developer",
+                "https://www.linkedin.com/in/mohsin-ali-9565402a4/"
+            ]
+        }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")">
+                <span class="brand-text">Mohsin <span class="brand-highlight">Ali</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "Home")#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "Home")#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "Home")#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "Home")#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "Home")#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Action("Contact", "Home")">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; @DateTime.Now.Year Mohsin Ali. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="https://github.com/MohsinAli-Developer" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/mohsin-ali-9565402a4/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:mohsinadspec@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

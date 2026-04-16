@@ -1,0 +1,91 @@
+﻿@model SampleProject.Models.ContactViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @TempData["SuccessMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+<section class="page-hero">
+    <div class="container">
+        <h1 class="display-4 fw-bold" data-aos="fade-up">Get In Touch</h1>
+        <p class="lead" data-aos="fade-up" data-aos-delay="100">Let's discuss your next project or collaboration</p>
+    </div>
+</section>
+
+<section class="contact-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 mb-4" data-aos="fade-right">
+                <div class="contact-info-card">
+                    <h2 class="h3 mb-4">Contact Information</h2>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Karachi, Pakistan</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope fa-2x text-primary"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <a href="mailto:mohsinadspec@gmail.com">mohsinadspec@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone fa-2x text-primary"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <a href="tel:+923249809554">+92-324-9809554</a>
+                        </div>
+                    </div>
+                    <div class="contact-social mt-4">
+                        <h3>Connect With Me</h3>
+                        <div class="social-links">
+                            <a href="https://github.com/MohsinAli-Developer" target="_blank" class="social-icon"><i class="fab fa-github fa-2x"></i></a>
+                            <a href="https://www.linkedin.com/in/mohsin-ali-9565402a4/" target="_blank" class="social-icon"><i class="fab fa-linkedin fa-2x"></i></a>
+                            <a href="mailto:mohsinadspec@gmail.com" class="social-icon"><i class="fas fa-envelope fa-2x"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7" data-aos="fade-left">
+                <div class="contact-form-card">
+                    <h2 class="h3 mb-4">Send Me a Message</h2>
+                    <form asp-action="Contact" method="post">
+                        @Html.AntiForgeryToken()
+                        <div class="mb-3">
+                            <label asp-for="Name" class="form-label">Full Name *</label>
+                            <input asp-for="Name" class="form-control" placeholder="Enter your name" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Email" class="form-label">Email Address *</label>
+                            <input asp-for="Email" class="form-control" placeholder="Enter your email" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Subject" class="form-label">Subject *</label>
+                            <input asp-for="Subject" class="form-control" placeholder="Enter subject" />
+                            <span asp-validation-for="Subject" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Message" class="form-label">Message *</label>
+                            <textarea asp-for="Message" class="form-control" rows="6" placeholder="Enter your message"></textarea>
+                            <span asp-validation-for="Message" class="text-danger"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
