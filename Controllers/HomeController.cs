@@ -17,7 +17,7 @@ namespace SampleProject.Controllers
         public IActionResult Index()
         {
             ViewData["Title"] = "Home | Mohsin Ali - .NET Developer";
-            ViewData["Description"] = "Junior .NET Developer with 1+ years experience in ASP.NET Core, Flutter, and React. View my portfolio, projects, and professional journey.";
+            //ViewData["Description"] = "Junior .NET Developer with 1+ years experience in ASP.NET Core, Flutter, and React. View my portfolio, projects, and professional journey.";
             ViewData["CanonicalUrl"] = $"{Request.Scheme}://{Request.Host}/";
             ViewData["OgImage"] = $"{Request.Scheme}://{Request.Host}/images/profile-og.jpg";
 

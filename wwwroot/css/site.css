@@ -476,3 +476,305 @@ body {
 .fade-in-up {
     animation: fadeInUp 0.6s ease-out;
 }
+
+
+
+:root {
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --glow-color: rgba(102, 126, 234, 0.5);
+}
+
+/* Animated Badge */
+.animated-badge {
+    background: var(--primary-gradient);
+    padding: 8px 20px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    animation: slideInDown 0.6s ease-out;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.pulse-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #4ade80;
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulse 2s infinite;
+    box-shadow: 0 0 0 rgba(74, 222, 128, 0.7);
+}
+
+/* Animated Gradient Text */
+.text-gradient {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.animated-gradient {
+    animation: gradientShift 3s ease infinite;
+    background-size: 200% 200%;
+}
+
+/* Typing Animation */
+.typing-text {
+    display: inline-block;
+    position: relative;
+}
+
+    .typing-text::after {
+        content: 'Junior .NET Developer';
+        animation: typewriter 3s steps(30) infinite, blink 0.75s step-end infinite;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 2px solid;
+    }
+
+/* Floating Animation */
+.floating-text {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Animated Buttons */
+.animated-btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+    .animated-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+    }
+
+    .animated-btn i {
+        margin-left: 8px;
+        transition: transform 0.3s ease;
+    }
+
+    .animated-btn:hover i {
+        transform: translateX(5px);
+    }
+
+/* Profile Section Animations */
+.profile-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.animated-border {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c);
+    background-size: 300% 300%;
+    animation: rotateBorder 4s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.profile-wrapper:hover .animated-border {
+    opacity: 1;
+}
+
+.profile-image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-image {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+    .profile-image:hover {
+        transform: scale(1.05) rotate(5deg);
+    }
+
+.status-indicator {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: #4ade80;
+    border: 3px solid white;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+/* Keyframes */
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(74, 222, 128, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+    }
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes typewriter {
+    0% {
+        width: 0;
+    }
+
+    30% {
+        width: 20ch;
+    }
+
+    70% {
+        width: 20ch;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    0%, 100% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #667eea;
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotateBorder {
+    0% {
+        background-position: 0% 50%;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        background-position: 100% 50%;
+        transform: rotate(360deg);
+    }
+}
+
+/* Parallax effect on scroll */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+    /* Animated background particles */
+    .hero-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.1) 0%, transparent 50%);
+        animation: moveBackground 20s ease-in-out infinite;
+        pointer-events: none;
+    }
+
+@keyframes moveBackground {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(50px, 50px) scale(1.2);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .profile-image {
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+    .typing-text::after {
+        font-size: 1.5rem;
+    }
+
+    .display-3 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Add hover effects for text */
+.text-gradient:hover {
+    animation: gradientShift 1s ease infinite;
+    transform: scale(1.05);
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+/* Glow effects */
+.animated-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.5);
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+

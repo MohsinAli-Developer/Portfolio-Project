@@ -3,7 +3,7 @@
 }
 
 <!-- Hero Section -->
-<section id="home" class="hero-section">
+@* <section id="home" class="hero-section">
     <div class="container">
         <div class="row align-items-center min-vh-100">
             <div class="col-lg-7" data-aos="fade-right">
@@ -31,8 +31,125 @@
             </div>
         </div>
     </div>
+</section> *@
+<section id="home" class="hero-section">
+    <div class="container">
+        <div class="row align-items-center min-vh-100">
+            <div class="col-lg-7" data-aos="fade-right">
+                <!-- Animated badge -->
+                <span class="badge animated-badge mb-3">
+                    <span class="pulse-dot"></span>
+                    Available for Work
+                </span>
+                
+                <!-- Animated gradient text -->
+                <h1 class="display-3 fw-bold mb-3">
+                    Hi, I'm <span class="text-gradient animated-gradient">Mohsin Ali</span>
+                </h1>
+                
+                <!-- Typing animation -->
+                <h2 class="h3 text-muted mb-4">
+                    <span class="typing-text"></span>
+                </h2>
+                
+                <!-- Floating animation for paragraph -->
+                <p class="lead mb-4 floating-text">
+                    1+ years of experience building web and mobile applications using ASP.NET Core, 
+                    Flutter and React. Proficient in REST API development, database design and cloud deployment.
+                </p>
+                
+                <!-- Animated buttons -->
+                <div class="d-flex gap-3">
+                    <a href="#projects" class="btn btn-primary btn-lg animated-btn">
+                        <span>View Projects</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="@Url.Action("Contact", "Home")" class="btn btn-outline-primary btn-lg animated-btn">
+                        <span>Contact Me</span>
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-lg-5 text-center" data-aos="fade-left">
+                <!-- Animated profile wrapper with rotating border -->
+                <div class="profile-wrapper">
+                    <div class="animated-border"></div>
+                    <div class="profile-image-container">
+                        <img src="~/images/myimage.jpeg"
+                             alt="Mohsin Ali Software Developer"
+                             class="img-fluid rounded-circle shadow-lg profile-image" />
+                        <div class="status-indicator"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
+
+<!-- Add Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<script>
+    // Add dynamic typing effect with multiple roles
+    document.addEventListener('DOMContentLoaded', function() {
+        const roles = [
+            'Junior .NET Developer',
+            'ASP.NET Core Expert',
+            'Flutter Developer',
+            'React Developer',
+            'API Specialist'
+        ];
+        
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typingElement = document.querySelector('.typing-text');
+        
+        if (typingElement) {
+            function typeEffect() {
+                const currentRole = roles[roleIndex];
+                //typingElement = "";
+                if (isDeleting) {
+                    typingElement.textContent = currentRole.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    typingElement.textContent = currentRole.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+                
+                if (!isDeleting && charIndex === currentRole.length) {
+                    isDeleting = true;
+                    setTimeout(typeEffect, 2000);
+                    return;
+                }
+                
+                if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    roleIndex = (roleIndex + 1) % roles.length;
+                    setTimeout(typeEffect, 500);
+                    return;
+                }
+                
+                const speed = isDeleting ? 50 : 100;
+                setTimeout(typeEffect, speed);
+            }
+            
+            typeEffect();
+        }
+        
+        // Add parallax effect to profile image
+        const profileImage = document.querySelector('.profile-image');
+        if (profileImage) {
+            document.addEventListener('mousemove', function(e) {
+                const x = (e.clientX / window.innerWidth - 0.5) * 20;
+                const y = (e.clientY / window.innerHeight - 0.5) * 20;
+                profileImage.style.transform = `translate(${x}px, ${y}px)`;
+            });
+        }
+    });
+</script>
 <!-- About Section -->
 <section id="about" class="about-section py-5">
     <div class="container">
